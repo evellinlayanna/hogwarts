@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts - Cadastro</title>
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+    <script src="{% static 'js/cadastro.js' %}" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="{% static 'images/icone.png' %}" alt="iconecad">
+        <h2>Hogwarts</h2>
+    </header>
+
+    <section id="cadastro">
+        <img src="{% static 'images/cadastro.png' %}" alt="cadastro" id="img1">
+        <h1>Cadastrar-se</h1>
+        <div id="formulario">
+            <form action="" method="post">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha">
+                <label for="senha2">Confirmar senha</label>
+                <input type="password" id="senha2" name="confirmasenha">
+                <input type="submit" value="Cadastrar" id="cadastrar" onclick=" return validar()">
+                {% csrf_token %} 
+            </form>
+        </div>
+        <p id="erro"></p>
+        <p id="erro2"></p>
+        <p id="erro3"></p>
+    </section>
+    <footer>
+        <p>© 2021.1 | Desenvolvido pela <strong>EJECT</strong></p>
+    </footer>
+</body>
+
+</html>

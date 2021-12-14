@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat' ;
+    src: url(fonte/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'trirong';
+    src: url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+}
+body{
+    background-image: linear-gradient(to bottom,#1D3E6E,#212223);
+    background-attachment: fixed;
+}
+#principal{
+    margin: 0 80px;
+}
+#iconebg{
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    height: 540px;
+    opacity: .5;
+}
+.bloco{
+    width: 350px;
+    height: 400px;
+    background: #E2D070;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 17px;
+    margin: 0 5px;
+    text-align: justify;
+    font-size: 14px;
+}
+.bloco h2{
+    margin-bottom: 15px;
+}
+#geral{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    width: 500px;
+    position: absolute;
+    left: 31%;
+}
+#geral button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#esquerda:hover{
+    animation-name: setae;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes setae {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-30%);
+    }
+    
+}
+#direita:hover{
+    animation-name: setar;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes setar {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(30%);
+    }
+    
+}
+#titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#titulo h2{
+    background: #1B1B1B;
+    color: white;
+    font-family: 'trirong';
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 100;
+}
+.ativo{
+    width: 350px;
+    height: 400px;
+}
+@media (max-width:480px){
+    .hidden{
+        display: none;
+    }
+    .bloco{
+        height: 450px;
+        width: 400px;
+        font-size: 16px;
+        margin: 0px;
+    }
+    #principal{
+        margin: 0;
+    }
+    #geral{
+        justify-content: center;
+        left: -7%;
+    }
+    #geral button{
+       margin: 0 20px; 
+    }
+}

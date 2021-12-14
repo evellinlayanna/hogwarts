@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts - Esportes</title>
+    <link rel="stylesheet" href="{% static 'css/esportes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+</head>
+
+<body>
+    <img src="{% static 'images/iconbg.png' %}" alt="iconebg" id="iconebg">
+
+    <header id="navbar">
+        <div id="logo">
+            <img src="{% static 'images/icone.png' %}" alt="icone">
+            <h2>Hogwarts</h2>
+        </div>
+        <nav id="nav">
+            <button id="btn-mobile" onclick="toggleMenu()">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'quemsomos' %}">Quem somos</a></li>
+                <li><a href="{% url 'nossamissao' %}">Nossa Missão</a></li>
+                <li><a href="{% url 'esportes' %}">Esportes</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="principal">
+        <h2>Esportes</h2>
+        <div id="geral">
+            <div id="quadribol">
+                <h3>Quadribol</h3>
+                <p>
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum.
+                </p>
+            </div>
+            <img src="{% static 'images/quadri.png' %}" alt="quadri" id="img1">
+            <img src="{% static 'images/jogos.png' %}" alt="jogos" id="img2">
+            <div id="jogos">
+                <h3>Jogos internos</h3>
+                <p>
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum
+                    lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                    lore
+                    ipsum lore ipsum.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

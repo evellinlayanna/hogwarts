@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts - Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="{% static 'js/login.js' %}" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="{% static 'images/icone.png' %}" alt="iconelogin">
+        <h2>Hogwarts</h2>
+    </header>
+
+    <section id="login">
+        <img src="{% static 'images/login.png' %}" alt="login" id="img1">
+        <h1>Login</h1>
+        <div id="formulario">
+            <form>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="emailLogin">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senhaLogin">
+                <input type="submit" value="Entrar" id="entrar">
+            </form>
+        </div>
+        <button id="cadastro"><a href="{% url 'cadastro' %}"> Cadastrar-se</a></button>
+    </section>
+    <footer>
+        <p>© 2021.1 | Desenvolvido pela <strong>EJECT</strong></p>
+    </footer>
+</body>
+
+</html>

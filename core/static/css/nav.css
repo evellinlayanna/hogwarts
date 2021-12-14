@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat' ;
+    src: url(fonte/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'trirong';
+    src: url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+}
+body{
+    background-size: 1370px 630px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    background: #313030;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+#logo img{
+    width: 69px;
+    height: 62px;
+}
+#logo h2{
+    font-size: 29px;
+    color: #EBCB25;
+    font-family: 'trirong';
+    font-weight: 200;
+}
+#menu{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+    gap: 30px;
+}
+#menu a{
+    display: block;
+    text-decoration: none;
+    color: #EBCB25;
+    transition: .3s;
+}
+#menu a:hover{
+    color: #af971d;
+}
+#btn-mobile{
+    display: none;
+}
+@media (max-width: 600px ){
+#menu{
+        display:block;
+        position: absolute;
+        width: 100%;
+        top: 62px;
+        right: -30px;
+        background: #242424cc;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        text-align: center;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #logo h2{
+        display: none;
+    }
+    #nav.active #menu{
+        height: 50vh;
+        visibility: visible;
+    }
+    #menu a{
+        padding: 1rem;
+    }
+    #btn-mobile{
+        display: flex;
+        background: none;
+        border: none;
+        margin-right: 30px;
+    }
+    #hamburguer{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        color: white;
+        cursor: pointer;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}

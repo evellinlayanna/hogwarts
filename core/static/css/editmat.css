@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat' ;
+    src: url(fonte/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'trirong';
+    src: url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+}
+body{
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+#editar{
+    width: 38%;
+    background-color: #F3F3F3;
+    height: 70vh;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,10%);
+}
+#titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 5%;
+}
+.materia{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin: 8% 0 8% 15%;
+}
+.materia h3{
+    border: 1px solid black;
+    font-weight: 400;
+    width: 40%;
+    padding: 5px;
+}
+.materia button{
+    border-radius: 20px;
+    background-color: #ED7272;
+    border: none;
+    width: 18%;
+    height: 5vh;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+#save{
+    display: block;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #8EBEEB;
+    border: none;
+    font-family: 'Montserrat';
+    width: 30%;
+    height: 4vh;
+    margin-left: 35%;
+    margin-bottom: 2%;
+}
+#cancelar{
+    display: block;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #ED7272;
+    border: none;
+    font-family: 'Montserrat';
+    width: 30%;
+    height: 4vh;
+    margin-left: 35%;
+}
+@media (max-width: 480px){
+    #editar{
+        width: 100%;
+        left: 35%;
+    }
+}

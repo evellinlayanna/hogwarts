@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat' ;
+    src: url(fonte/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'trirong';
+    src: url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+}
+@font-face {
+    font-family: 'ubuntu';
+    src: url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+}
+body{
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    background: #7290AC;
+    display: none;
+}
+#logo{
+    display: flex;
+    align-items: center;
+}
+#logo img{
+    width: 69px;
+    height: 62px;
+}
+#logo h2{
+    font-size: 29px;
+    color: #EBCB25;
+    font-family: 'trirong';
+    font-weight: 200;
+}
+#menu{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+    gap: 30px;
+}
+#menu a{
+    display: block;
+    text-decoration: none;
+    color: #EBCB25;
+    transition: .3s;
+}
+#menu a:hover{
+    color: #af971d;
+}
+#btn-mobile{
+    display: none;
+}
+@media (max-width: 480px ){
+    #barralateral{
+        display: none;
+    }
+    #perfil{
+        visibility: hidden;
+    }
+    #navbar{
+        display: flex;
+    }
+    #menu{
+        display:block;
+        position: absolute;
+        width: 100%;
+        top: 62px;
+        right: -30px;
+        background: #242424cc;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        text-align: center;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #logo h2{
+        display: none;
+    }
+    #nav.active #menu{
+        height: 50vh;
+        visibility: visible;
+    }
+    #menu a{
+        padding: 1rem;
+    }
+    #btn-mobile{
+        display: flex;
+        background: none;
+        border: none;
+        margin-right: 30px;
+    }
+    #hamburguer{
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+        color: white;
+        cursor: pointer;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+#corpo{
+    position: absolute;
+    width: 82%;
+    left: 18%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#barralateral{
+    background-color: #7290AC;
+    width:18%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+}
+#barralateral img{
+    margin: 1.063rem 0 2.5rem 3.75rem;
+    width: 6.813rem;
+    height: 6.375rem;
+}
+#navdesk{
+    margin-left: 4.375rem;
+}
+#navdesk li{
+    margin: 10px;
+}
+#navdesk a{
+    text-decoration: none;
+    color: #D7D5D4;
+}
+#navdesk a:hover{
+    color: #535353;
+
+}
+#home{
+    list-style-image: url('imagens/home.png');
+    color: #3C3838;
+}
+#home a{
+    color: #3C3838;
+    font-weight: 600;
+}
+#home a:hover{
+    color: #131212;
+
+}
+#monitor{
+    list-style-image: url('imagens/monitores.png');
+}
+#aulas{
+    list-style-image: url('imagens/aulas.png');
+}
+#anotaçoes{
+    list-style-image: url('imagens/anotaçoes.png');
+}
+#simulados{
+    list-style-image: url('imagens/simulados.png');
+}
+#ajuda{
+    margin-left: 3.5rem;
+    margin-top: 9rem;
+}
+#ajuda li{
+    font-size: 14px;
+    list-style: none;
+    margin: .3rem;
+}
+#ajuda a{
+    text-decoration: none;
+    color: #D7D5D4;
+}
+#ajuda a:hover{
+    color: #535353;
+}
+#perfil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    padding: 0px 1.3rem;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+#div1{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#active{
+    position: absolute;
+    left: 85%;
+    top: .7%;
+    width: 9.6rem;
+    height: 6.1rem;
+    border-radius: 20px;
+    background-color: #CBCBCB;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    visibility: hidden;
+}
+#active img{
+    margin-left: 10px;
+}
+#active h6{
+    margin-left: 5px;
+}
+#perfil div h6{
+    margin-right: .7rem;
+}
+#active a{
+    text-decoration: none;
+    color: black;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#imgperfil{
+    cursor: pointer;
+}

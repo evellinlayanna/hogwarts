@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts - Contato</title>
+    <link rel="stylesheet" href="{% static 'css/contato.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <script src="{% static 'js/nav.js' %}" defer></script>
+</head>
+
+<body>
+    <header id="navbar">
+        <div id="logo">
+            <img src="{% static 'images/icone.png' %}" alt="icone">
+            <h2>Hogwarts</h2>
+        </div>
+        <nav id="nav">
+            <button id="btn-mobile" onclick="toggleMenu()">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'quemsomos' %}">Quem somos</a></li>
+                <li><a href="{% url 'nossamissao' %}">Nossa Missão</a></li>
+                <li><a href="{% url 'esportes' %}">Esportes</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="{% static 'images/iconectt.png' %}" alt="iconectt1" id="img1">
+    <img src="{% static 'images/iconectt.png' %}" alt="iconectt2" id="img2">
+    <section id="principal">
+        <h2>Formulário para contato</h2>
+        <form>
+            <input type="text" placeholder="nome" id="nome">
+            <input type="email" placeholder="email" id="email">
+            <textarea name="Mensagem" id="msg" cols="30" rows="10" placeholder="Mensagem"></textarea>
+            <input type="submit" value="Enviar" id="btn">
+        </form>
+        <div id="social">
+            <a href=""><img src="{% static 'images/facebook.png' %}" alt="face"></a>
+            <a href=""><img src="{% static 'images/instagram.png' %}" alt="insta"></a>
+            <a href=""><img src="{% static 'images/twitter.png' %}" alt="tt"></a>
+        </div>
+    </section>
+    <button id="login"><a href="{% url 'login' %}">Prosseguir para login no sistema</a></button>
+    <footer>
+        <p>Trilha - EJECT © 2021.2</p>
+    </footer>
+</body>
+
+</html>

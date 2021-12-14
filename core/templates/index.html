@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts - Inicio</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <script defer src="{% static 'js/nav.js' %}"></script>
+</head>
+
+<body>
+    <div id="bg">
+        <header id="navbar">
+            <div id="logo">
+                <img src="{% static 'images/icone.png' %}" alt="icone">
+                <h2>Hogwarts</h2>
+            </div>
+            <nav id="nav">
+                <button id="btn-mobile" onclick="toggleMenu()">
+                    <span id="hamburguer"></span>
+                </button>
+                <ul id="menu">
+                    <li><a href="{% url 'index' %}">Início</a></li>
+                    <li><a href="{% url 'quemsomos' %}">Quem somos</a></li>
+                    <li><a href="{% url 'nossamissao' %}">Nossa Missão</a></li>
+                    <li><a href="{% url 'esportes' %}">Esportes</a></li>
+                    <li><a href="{% url 'contato' %}">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="geral">
+            <h3>Que tal descobrir um pouco sobre hogwarts?</h3>
+            <p>lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum.</p>
+            <button id="btn"><a href="">Saiba mais</a></button>
+        </main>
+        <section id="hog">
+            <img src="{% static 'images/hog.png' %}" alt="hog">
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hogwarts</title>
+    <link rel="stylesheet" href="{% static 'glider/Glider.js-master/glider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navlog.css' %}">
+    <script src="{% static 'glider/Glider.js-master/glider.js' %}" defer></script>
+    <script src="{% static 'js/nav.js'%}" defer></script>
+    <script src="{% static 'js/dashboard.js'%}" defer></script>
+    <script src="{% static 'js/sliderdash.js' %}" defer></script>
+    <script src="{% static 'js/navlog.js' %}" defer></script>
+</head>
+
+<body>
+    <!-- parte mobile -->
+    <header id="navbar">
+        <div id="logo">
+            <img src="{% static 'images/icone.png' %}" alt="icone">
+            <h2>Hogwarts</h2>
+        </div>
+        <nav id="nav">
+            <button id="btn-mobile" onclick="toggleMenu()">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="{% url 'dashboard' %}">Home</a></li>
+                <li><a href="">Monitores</a></li>
+                <li><a href="">Aulas</a></li>
+                <li><a href="">Anotações</a></li>
+                <li><a href="">Simulados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- fim da parte mobile -->
+    <div id="corpo">
+        <header id="barralateral">
+            <img src="{% static 'images/icone.png' %}" alt="iconenav">
+            <ul id="navdesk">
+                <li id="home"><a href="">Home</a></li>
+                <li id="monitor"><a href="">Monitores</a></li>
+                <li id="aulas"><a href="">Aulas</a></li>
+                <li id="anotaçoes"><a href="">Anotações</a></li>
+                <li id="simulados"><a href="">Simulados</a></li>
+            </ul>
+
+            <ul id="ajuda">
+                <li><a href="">Ajuda</a></li>
+                <li><a href="">Suporte</a></li>
+                <li><a href="">Contatos</a></li>
+                <li><a href="">Politicas</a></li>
+            </ul>
+        </header>
+        <!-- fim da nav desktop -->
+        <section id="perfil">
+            <h3>Home</h3>
+            <div id="div1" onclick="ativar()">
+                <h6>Hermione</h6>
+                <img src="{% static 'images/perfil.png' %}" alt="perfil">
+            </div>
+            <!-- ativo do menu -->
+            <div id="active">
+                <h6>Hermione</h6>
+                <img src="{% static 'images/perfil.png' %}" alt="perfil" id="imgperfil" onclick="desativar()">
+
+                <div class="flex">
+                    <img src="{% static 'images/user-circle.png' %}" alt="usuario">
+                    <h6><a href="{% url 'adm' %}">Perfil</a></h6>
+                </div>
+                <br>
+                <div class="flex">
+                    <img src="{% static 'images/external-link-alt.png' %}" alt="sair">
+                    <h6><a href="{% url 'login' %}">Sair</a></h6>
+                </div>
+            </div>
+        </section>
+        <!-- fim do perfil -->
+        <div id="principal">
+            <!-- Slide -->
+            <div id="noticias">
+                <h3>Noticias da semana</h3>
+                <div class="carrossel">
+                    <button aria-label="preview" class="btn-slideE"><img src="{% static 'images/angle-right.png' %}"
+                            alt="setaesrq"></button>
+                    <div class="slides">
+                        <div class="noticia">
+                            <h3>Lorem ipsum1</h3>
+                            <p>
+                                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                                lore ipsum lore ipsum lore
+                                ipsum.
+                            </p>
+                        </div>
+                        <div class="noticia">
+                            <h3>Lorem ipsum2</h3>
+                            <p>
+                                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                                lore ipsum lore ipsum
+                                lore
+                                ipsum.
+                            </p>
+                        </div>
+                        <div class="noticia">
+                            <h3>Lorem ipsum3</h3>
+                            <p>
+                                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum
+                                lore ipsum lore ipsum
+                                lore
+                                ipsum.
+                            </p>
+                        </div>
+                    </div>
+                    <button aria-label="next" class="btn-slideD"><img src="{% static 'images/angle-right (1).png' %}"
+                            alt="setadire"></button>
+                </div>
+            </div>
+            <!-- Fim do slide -->
+            <!-- progresso de ativ -->
+            <div id="progresso">
+                <h3>Progesso de atividades</h3>
+                <div id="atividades">
+                    <div class="ativ">
+                        <h4>Herbologia</h4>
+                        <h2>50%</h2>
+                        <h5>Listas feitas</h5>
+                        <p>5/10</p>
+                        <div class="containerHerb">
+                            <div class="progressbarHerb">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ativ">
+                        <h4>Feitiços</h4>
+                        <h2>10%</h2>
+                        <h5>Listas feitas</h5>
+                        <p>1/10</p>
+                        <div class="containerfeit">
+                            <div class="progressbarfeit">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ativ">
+                        <h4>Poções</h4>
+                        <h2>50%</h2>
+                        <h5>Listas feitas</h5>
+                        <p>5/10</p>
+                        <div class="containerHerb">
+                            <div class="progressbarHerb">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ativ">
+                        <h4>Voo</h4>
+                        <h2>60%</h2>
+                        <h5>Listas feitas</h5>
+                        <p>6/10</p>
+                        <div class="containerVoo">
+                            <div class="progressbarVoo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim do progresso de ativ -->
+
+            <div id="desempenho">
+                <h3>Desenvolvimento durante a semana</h3>
+                <div id="dev">
+                    <div class="grafico" style="margin-bottom: 3%;">
+                        <h4>Materia de maior desempenho</h4>
+                        <img src="{% static 'images/trending-up.png' %}" alt="graficoup">
+                        <h4>Voo</h4>
+                    </div>
+                    <div class="grafico">
+                        <h4>Matéria de menor desempneho</h4>
+                        <img src="{% static 'images/trending-down (1).png' %}" alt="graficodown">
+                        <h4>Feitiços</h4>
+                    </div>
+                </div>
+                <!-- Fim da dashboard1 -->
+            </div>
+        </div>
+        <!-- inicio da dashboard2 -->
+        <div id="side">
+            <div id="tarefas">
+                <h4>Tarefas pendentes</h4>
+                <ul>
+                    <li>Herbologia - cap 1</li>
+                    <li>Feitiços - cap 2</li>
+                    <li>Poções - Pratica 4</li>
+                    <li>Voo - AV1 (22/08)</li>
+                </ul>
+            </div>
+
+            <div id="forum">
+                <h4>Forúm</h4>
+                <ul>
+                    <li>Grupo no Whatsapp</li>
+                    <li>Dicas e acompanhamento de aulas</li>
+                    <li>Material do aulão</li>
+                </ul>
+            </div>
+
+            <div id="materias">
+                <h4>Matérias cadastradas</h4>
+                <ul>
+                    <li>Herbologia</li>
+                    <li>Feitiço</li>
+                    <li>Voo</li>
+                    <li>Poções</li>
+                </ul>
+                <button id="btn-add"><a href="{% url 'addmat' %}"><img src="{% static 'images/add.png' %}" alt="addmat">Adicionar Matéria
+                    </a></button>
+                <button id="btn-edit"><a href="{% url 'editmat' %}"><img src="{% static 'images/edit.png' %}" alt="editmat">Editar
+                        Matérias</a></button>
+            </div>
+
+        </div>
+        <footer>
+            <p>Dashboard Hogwarts © 2021.1 | Desenvolvido pela EJECT.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

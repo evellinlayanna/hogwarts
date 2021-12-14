@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat' ;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'trirong';
+    src: url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+}
+body{
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+#bg{
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-size:100% 100vh;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -10;
+}
+#geral{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+#geral p{
+    font-size: 28px;
+}
+#btn{
+    background-color: #1D2951;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 20px;
+}
+#btn a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    padding-top: 15px;
+}
+#btn-mobile{
+    display: none;
+}
+#hog{
+    position: absolute;
+    top: 59%;
+    left: 84%;
+    opacity: .5;
+}
+#hog img{
+    width: 208px;
+    height: 246px;
+}
+@media (max-width: 480px ){
+    
+    #geral h3{
+        font-size: 26px;
+    }
+    #geral p{
+        font-size: 20px;
+    }
+    #hog{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
+}

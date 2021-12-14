@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Montserrat' ;
+    src: url(fonte/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'trirong';
+    src: url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+}
+body{
+    background-image: linear-gradient(to bottom,#2F6A5D,#292B29);
+    background-attachment: fixed;
+}
+#principal{
+    background: #030303b4;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 20px;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#principal h2{
+    color: white;
+    margin-left: 30px;
+}
+#img1{
+    opacity: 0.4;
+    position: absolute;
+    width: 340px;
+    height: 420px;
+    top: 20%;
+    left: 5%;
+    z-index: -1;
+}
+#img2{
+    opacity: 0.4;
+    position: absolute;
+    width: 340px;
+    height: 420px;
+    top: 20%;
+    left: 70%;
+    z-index: -1;
+}
+#nome{
+    display: block;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 350px;
+    height: 38px;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    font-family: 'Montserrat';
+    margin: 20px;
+}
+#email{
+    display: block;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 350px;
+    height: 38px;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    font-family: 'Montserrat';
+    margin: 20px;
+}
+#msg{
+    display: block;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 350px;
+    height: 200px;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    font-family: 'Montserrat';
+    margin: 20px;
+}
+#btn{
+    border-radius: 20px;
+    border: none;
+    background: #1D2951;
+    width: 130px;
+    height: 58px;
+    color: white;
+    font-family: 'Montserrat';
+    margin-left: 60%;
+    cursor: pointer;
+    transition: .3s;
+}
+#btn:hover{
+    background: #131b35;
+}
+#social{
+    position: absolute;
+    top: 87%;
+    left: 9%;
+}
+#social img{
+    width: 35px;
+    height: 30px;
+    margin: 5px;
+}
+footer{
+    position: absolute;
+    bottom: -10%;
+    background: #313030;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    color: #EBCB25;
+    justify-content: center;
+    align-items: center;
+}
+#login:hover{
+    background: #131b35;
+    transition: .3s;
+
+}
+#login{
+    background-color: #1D2951;
+    border-radius: 20px;
+    border: none;
+    width: 30%;
+    height: 5vh;
+    position: absolute;
+    top: 95%;
+    left: 35%;
+    cursor: pointer;
+}
+#login a{
+    text-decoration: none;
+    color: white;
+}
+@media (max-width: 480px){
+    #img2{
+        display: none;
+    }
+    #img1{
+        left: 14.5%;
+    }
+    #principal{
+        width: 80%;
+        top: 54%;
+    }
+    #nome{
+        width: 90%;
+    }
+    #email{
+        width: 90%;
+    }
+    #msg{
+        width: 90%;
+        height: 150px;
+    }
+    #btn{
+        margin-left: 32%;
+    }
+    #social{
+        position: static;
+        margin-left: 30%;
+        margin-top: 20px;
+    }
+    footer{
+        bottom: -10%;
+    }
+
+}

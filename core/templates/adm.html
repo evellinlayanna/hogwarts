@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seção inicial - ADM</title>
+    <link rel="stylesheet" href="{% static 'css/admnav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/adm.css' %}">
+    <script src="{% static 'js/nav.js' %}" defer></script>
+    <script src="{% static 'js/admnav.js' %}" defer></script>
+</head>
+
+<body>
+    <!-- parte mobile -->
+    <header id="navbar">
+        <div id="logo">
+            <img src="{% static 'images/icone.png' %}" alt="icone">
+            <h2>Hogwarts</h2>
+        </div>
+        <nav id="nav">
+            <button id="btn-mobile" onclick="toggleMenu()">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="">Site institucional</a></li>
+                <li><a href="">Cadastro de matérias</a></li>
+                <li><a href="">Gerenciamento de alunos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- fim da parte mobile -->
+    <div id="corpo">
+        <header id="barralateral">
+            <img src="{% static 'images/icone.png' %}" alt="iconenav" id="imgbarra">
+
+            <div id="drophome">
+
+                <button id="btn-home" onclick="dropMenu()">
+                    <div><img src="{% static 'images/home_24px.png' %}" alt="homenav"> Home </div><img src="{% static 'images/Polygon 65.png' %}"
+                        alt="setahome" id="setahome">
+                </button>
+
+                <ul id="navdesk">
+                    <li><a href="{% url 'index' %}">Site institucional</a></li>
+                    <li><a href="{% url 'addmat' %}">Cadastro de matérias</a></li>
+                    <li><a href="">Gerenciamento de alunos</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="content">
+            <header id="pesquisa">
+                <div id="barra">
+                    <input type="text">
+                    <button type="submit"><img src="{% static 'images/search_24px.png' %}" alt=""></button>
+                </div>
+                <div id="sair">
+                    <button id="btn-sair"><a href="{% url 'login' %}">Sair <img src="{% static 'images/meeting_room_24px.png' %}" alt=""></a></button>
+                </div>
+            </header>
+            <div id="board">
+                <div class="block">
+                    <h3>Matérias</h3>
+                    <h3>20</h3>
+                </div>
+                <div class="block">
+                    <h3>Alunos</h3>
+                    <h3>04</h3>
+                </div>
+            </div>
+            <div id="insti">
+                <h2>Site institucional</h2>
+                <h3>Institucional</h3>
+                <div class="seçao1">
+                    <p>Seção inicial</p>
+                    <img src="{% static 'images/edit.png' %}" alt="">
+                </div>
+                <div class="seçao2">
+                    <p>Quem somos</p>
+                    <img src="{% static 'images/edit.png' %}" alt="">
+                </div>
+                <div class="seçao1">
+                    <p>Nossa missão</p>
+                    <img src="{% static 'images/edit.png' %}" alt="">
+                </div>
+                <div class="seçao2">
+                    <p>Esporte</p>
+                    <img src="{% static 'images/edit.png' %}" alt="">
+                </div>
+                <div class="seçao1">
+                    <p>Contato</p>
+                    <img src="{% static 'images/edit.png' %}" alt="">
+                </div>
+            </div>
+            <footer>
+                <p>© 2021.1 | Desenvolvido pela EJECT.</p>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

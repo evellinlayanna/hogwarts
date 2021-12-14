@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/addmat.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navlog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/editmat.css' %}">
+    <script src="{% static 'js/navlog.js' %}" defer></script>
+    <script src="{% static 'js/nav.js' %}" defer></script>
+    <title>Hogwarst - Editar matérias</title>
+</head>
+
+<body>
+    <!-- parte mobile -->
+    <header id="navbar">
+        <div id="logo">
+            <img src="{% static 'images/icone.png' %}" alt="icone">
+            <h2>Hogwarts</h2>
+        </div>
+        <nav id="nav">
+            <button id="btn-mobile" onclick="toggleMenu()">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="{% url 'dashboard' %}">Home</a></li>
+                <li><a href="">Monitores</a></li>
+                <li><a href="">Aulas</a></li>
+                <li><a href="">Anotações</a></li>
+                <li><a href="">Simulados</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- fim da parte mobile -->
+    <div id="corpo">
+        <header id="barralateral">
+            <img src="{% static 'images/icone.png' %}" alt="iconenav">
+            <ul id="navdesk">
+                <li id="home"><a href="{% url 'dashboard' %}">Home</a></li>
+                <li id="monitor"><a href="">Monitores</a></li>
+                <li id="aulas"><a href="">Aulas</a></li>
+                <li id="anotaçoes"><a href="">Anotações</a></li>
+                <li id="simulados"><a href="">Simulados</a></li>
+            </ul>
+
+            <ul id="ajuda">
+                <li><a href="">Ajuda</a></li>
+                <li><a href="">Suporte</a></li>
+                <li><a href="">Contatos</a></li>
+                <li><a href="">Politicas</a></li>
+            </ul>
+        </header>
+        <!-- fim da nav desktop -->
+        <section id="perfil">
+            <h3>Home</h3>
+            <div id="div1" onclick="ativar()">
+                <h6>Hermione</h6>
+                <img src="{% static 'images/perfil.png' %}" alt="perfil">
+            </div>
+            <!-- ativo do menu -->
+            <div id="active">
+                <h6>Hermione</h6>
+                <img src="{% static 'images/perfil.png' %}" alt="perfil" id="imgperfil" onclick="desativar()">
+
+                <div class="flex">
+                    <img src="{% static 'images/user-circle.png' %}" alt="usuario">
+                    <h6><a href="{% url 'adm' %}">Perfil</a></h6>
+                </div>
+                <br>
+                <div class="flex">
+                    <img src="{% static 'images/external-link-alt.png' %}" alt="sair">
+                    <h6><a href="">Sair</a></h6>
+                </div>
+            </div>
+        </section>
+
+        <section id="editar">
+            <div id="titulo">
+                <img src="{% static 'images/edit.png' %}" alt="editmat">
+                <h3>Editar materias</h3>
+            </div>
+            <div class="materia">
+                <h3>Voo</h3>
+                <button>Excluir</button>
+            </div>
+            <div class="materia">
+                <h3>Feitiços</h3>
+                <button>Excluir</button>
+            </div>
+            <div class="materia">
+                <h3>Poção</h3>
+                <button>Excluir</button>
+            </div>
+            <div class="materia">
+                <h3>Herbologia</h3>
+                <button>Excluir</button>
+            </div>
+            <button id="save">SALVAR</button>
+            <button id="cancelar">Cancelar</button>
+        </section>
+
+        <footer>
+            <p>Dashboard Hogwarts © 2021.1 | Desenvolvido pela EJECT.</p>
+        </footer>
+    </div>
+</body>

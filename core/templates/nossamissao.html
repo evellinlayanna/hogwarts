@@ -1,0 +1,171 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts - Nossa missão</title>
+    <link rel="stylesheet" href="{% static 'glider/Glider.js-master/glider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nossamissao.css' %}">
+    <script src="{% static 'glider/Glider.js-master/glider.js' %}" defer></script>
+    <script src="{% static 'js/nav.js' %}" defer></script>
+    <script src="{% static 'js/nossamissao.js' %}" defer></script>
+</head>
+
+<body>
+    <img src="{% static 'images/iconbg.png' %}" alt="iconebg" id="iconebg">
+    <header id="navbar">
+        <div id="logo">
+            <img src="{% static 'images/icone.png' %}" alt="icone">
+            <h2>Hogwarts</h2>
+        </div>
+        <nav id="nav">
+            <button id="btn-mobile" onclick="toggleMenu()">
+                <span id="hamburguer"></span>
+            </button>
+            <ul id="menu">
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'quemsomos' %}">Quem somos</a></li>
+                <li><a href="{% url 'nossamissao' %}">Nossa Missão</a></li>
+                <li><a href="{% url 'esportes' %}">Esportes</a></li>
+                <li><a href="{% url 'contato' %}">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="principal">
+        <div id="titulo">
+            <h2 id="nome">Nossa missão</h2>
+        </div>
+        <div id="geral" class="c-carousel-js">
+            <button aria-label="Previous" id="esquerda" class="js-esquerda"><img src="{% static 'images/setae.png' %}"
+                    alt="setaE"></button>
+            <div class="gliderjs">
+                <div class="bloco" id="valores">
+                    <h2>Nossos valores</h2>
+                    <p>lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum.
+                    </p>
+                </div>
+
+                <div class="bloco" id="missao">
+                    <h2>Nossa missão</h2>
+                    <p>lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        .</p>
+                </div>
+
+                <div class="bloco" id="visao">
+                    <h2>Nossa visão</h2>
+                    <p>lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                        ipsum
+                        lore ipsum lore ipsum
+                        .</p>
+                </div>
+            </div>
+            <button id="direita" aria-label="Next" class="js-direita"><img src="{% static 'images/setar.png' %}" alt="setaR"></button>
+        </div>
+    </section>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="c-carrousel">
+    <div class="c-carrousel__slides" id="geral">
+        <div class="c-carousel__slides bloco">
+            <h2>Nossos valores</h2>
+            <p>lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum.
+        </div>
+        <div class="c-carousel__slides bloco">
+            <h2>Nossa missão</h2>
+            <p>lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                .</p>
+        </div>
+        <div class="c-carousel__slides bloco">
+            <h2>Nossa visão</h2>
+            <p>lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore ipsum lore
+                ipsum
+                lore ipsum lore ipsum
+                .</p>
+        </div>
+
+    </div>
+    <button aria-label="anterior"><img src="imagens/setae.png" alt="setaE"></button>
+    <button aria-label="próximo"><img src="imagens/setar.png" alt="setaR"></button>
+
+</div> -->
